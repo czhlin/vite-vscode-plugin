@@ -1,6 +1,7 @@
 {
   "publisher": "czhlin-test",
   "name": "template-vue-import",
+  "type": "module",
   "version": "0.0.0",
   "private": true,
   "description": "vite + vue",
