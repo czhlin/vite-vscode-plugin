@@ -1,5 +1,5 @@
 {
-  "publisher": "tomjs-test",
+  "publisher": "czhlin-test",
   "name": "template-vue-import",
   "version": "0.0.0",
   "private": true,
@@ -33,7 +33,7 @@
     "vue": "^3.5.11"
   },
   "devDependencies": {
-    "@tomjs/vite-plugin-vscode": "workspace:^",
+    "@czhlin/vite-plugin-vscode": "workspace:^",
     "@types/vscode": "^1.75.0",
     "@types/vscode-webview": "^1.57.5"
   }

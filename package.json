@@ -1,16 +1,16 @@
 {
-  "name": "@tomjs/vite-plugin-vscode",
-  "version": "4.2.1",
+  "name": "@czhlin/vite-plugin-vscode",
+  "version": "4.2.2",
   "packageManager": "pnpm@10.10.0",
   "description": "Use vue/react to develop 'vscode extension webview', supporting esm/cjs",
   "author": {
-    "name": "Tom Gao",
-    "email": "tom@tomgao.cc"
+    "name": "czhlin",
+    "email": "2324133088@qq.com"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tomjs/vite-plugin-vscode.git"
+    "url": "git+https://github.com/czhlin/vite-vscode-plugin.git"
   },
   "keywords": [
     "vite",
@@ -25,14 +25,22 @@
   ],
   "exports": {
     ".": {
+      "types": {
+        "import": "./dist/index.d.mts",
+        "require": "./dist/index.d.ts"
+      },
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
     },
     "./webview": {
+      "types": {
+        "import": "./dist/webview.d.mts",
+        "require": "./dist/webview.d.ts"
+      },
       "import": "./dist/webview.mjs",
       "require": "./dist/webview.js"
     },
-    "./client": "./dist/client.global.js",
+    "./client": "./dist/client.life.js",
     "./env": "./env.d.ts"
   },
   "main": "./dist/index.js",
