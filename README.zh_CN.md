@@ -1,6 +1,6 @@
-# @tomjs/vite-plugin-vscode
+# @czhlin/vite-plugin-vscode
 
-[![npm](https://img.shields.io/npm/v/@tomjs/vite-plugin-vscode)](https://www.npmjs.com/package/@tomjs/vite-plugin-vscode) ![node-current (scoped)](https://img.shields.io/node/v/@tomjs/vite-plugin-vscode) ![NPM](https://img.shields.io/npm/l/@tomjs/vite-plugin-vscode) [![jsDocs.io](https://img.shields.io/badge/jsDocs.io-reference-blue)](https://www.jsdocs.io/package/@tomjs/vite-plugin-vscode)
+[![npm](https://img.shields.io/npm/v/@czhlin/vite-plugin-vscode)](https://www.npmjs.com/package/@czhlin/vite-plugin-vscode) ![node-current (scoped)](https://img.shields.io/node/v/@czhlin/vite-plugin-vscode) ![NPM](https://img.shields.io/npm/l/@czhlin/vite-plugin-vscode) [![jsDocs.io](https://img.shields.io/badge/jsDocs.io-reference-blue)](https://www.jsdocs.io/package/@czhlin/vite-plugin-vscode)
 
 [English](./README.md) | **中文**
 
@@ -27,13 +27,13 @@ NodeJS 扩展现在(`v1.100.0+`)支持使用 JavaScript 模块 (ESM) 的扩展�
 
 ```bash
 # pnpm
-pnpm add @tomjs/vite-plugin-vscode -D
+pnpm add @czhlin/vite-plugin-vscode -D
 
 # yarn
-yarn add @tomjs/vite-plugin-vscode -D
+yarn add @czhlin/vite-plugin-vscode -D
 
 # npm
-npm i @tomjs/vite-plugin-vscode -D
+npm i @czhlin/vite-plugin-vscode -D
 ```
 
 ## 使用说明
@@ -112,7 +112,7 @@ panel.webview.html = __getWebviewHtml__({
 - `vite.config.ts`
 
 ```ts
-import vscode from '@tomjs/vite-plugin-vscode';
+import vscode from '@czhlin/vite-plugin-vscode';
 import vue from '@vitejs/plugin-vue';
 import { defineConfig } from 'vite';
 
@@ -138,7 +138,7 @@ export default defineConfig({
 - `vite.config.ts`
 
 ```ts
-import vscode from '@tomjs/vite-plugin-vscode';
+import vscode from '@czhlin/vite-plugin-vscode';
 import react from '@vitejs/plugin-react-swc';
 import { defineConfig } from 'vite';
 
@@ -156,7 +156,7 @@ export default defineConfig({
 
 ```ts
 import path from 'node:path';
-import vscode from '@tomjs/vite-plugin-vscode';
+import vscode from '@czhlin/vite-plugin-vscode';
 
 export default defineConfig({
   plugins: [vscode()],
@@ -254,7 +254,7 @@ const value = await acquireVsCodeApi().getState();
 
 ## 文档
 
-- [unpkg.com](https://www.unpkg.com/) 提供的 [index.d.ts](https://www.unpkg.com/browse/@tomjs/vite-plugin-vscode/dist/index.d.ts).
+- [unpkg.com](https://www.unpkg.com/) 提供的 [index.d.ts](https://www.unpkg.com/browse/@czhlin/vite-plugin-vscode/dist/index.d.ts).
 
 ## 参数
 
@@ -283,7 +283,7 @@ const value = await acquireVsCodeApi().getState();
   - extension: 在调用 `__getWebviewHtml__` 方法的文件顶部注入 `import __getWebviewHtml__ from '@tomjs/vscode-extension-webview';`
   - web: 在 index.html 中添加 `<script>` 标签，注入 `@tomjs/vscode-extension-webview/client` 代码
 - vite build
-  - extension: 在调用 `__getWebviewHtml__` 方法的文件顶部注入 `import __getWebviewHtml__ from '@tomjs/vite-plugin-vscode-inject';`
+  - extension: 在调用 `__getWebviewHtml__` 方法的文件顶部注入 `import __getWebviewHtml__ from '@czhlin/vite-plugin-vscode-inject';`
 
 如果为字符串，则设置注入方法名，默认为 `__getWebviewHtml__`。
 

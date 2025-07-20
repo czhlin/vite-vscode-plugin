@@ -1,6 +1,6 @@
-# @tomjs/vite-plugin-vscode
+# @czhlin/vite-plugin-vscode
 
-[![npm](https://img.shields.io/npm/v/@tomjs/vite-plugin-vscode)](https://www.npmjs.com/package/@tomjs/vite-plugin-vscode) ![node-current (scoped)](https://img.shields.io/node/v/@tomjs/vite-plugin-vscode) ![NPM](https://img.shields.io/npm/l/@tomjs/vite-plugin-vscode) [![jsDocs.io](https://img.shields.io/badge/jsDocs.io-reference-blue)](https://www.jsdocs.io/package/@tomjs/vite-plugin-vscode)
+[![npm](https://img.shields.io/npm/v/@czhlin/vite-plugin-vscode)](https://www.npmjs.com/package/@czhlin/vite-plugin-vscode) ![node-current (scoped)](https://img.shields.io/node/v/@czhlin/vite-plugin-vscode) ![NPM](https://img.shields.io/npm/l/@czhlin/vite-plugin-vscode) [![jsDocs.io](https://img.shields.io/badge/jsDocs.io-reference-blue)](https://www.jsdocs.io/package/@czhlin/vite-plugin-vscode)
 
 **English** | [中文](./README.zh_CN.md)
 
@@ -27,13 +27,13 @@ The NodeJS extension host now (`v1.100.0+`) supports extensions that use JavaScr
 
 ```bash
 # pnpm
-pnpm add @tomjs/vite-plugin-vscode -D
+pnpm add @czhlin/vite-plugin-vscode -D
 
 # yarn
-yarn add @tomjs/vite-plugin-vscode -D
+yarn add @czhlin/vite-plugin-vscode -D
 
 # npm
-npm i @tomjs/vite-plugin-vscode -D
+npm i @czhlin/vite-plugin-vscode -D
 ```
 
 ## Usage
@@ -112,7 +112,7 @@ panel.webview.html = __getWebviewHtml__({
 - `vite.config.ts`
 
 ```ts
-import vscode from '@tomjs/vite-plugin-vscode';
+import vscode from '@czhlin/vite-plugin-vscode';
 import vue from '@vitejs/plugin-vue';
 import { defineConfig } from 'vite';
 
@@ -138,7 +138,7 @@ export default defineConfig({
 - `vite.config.ts`
 
 ```ts
-import vscode from '@tomjs/vite-plugin-vscode';
+import vscode from '@czhlin/vite-plugin-vscode';
 import react from '@vitejs/plugin-react-swc';
 import { defineConfig } from 'vite';
 
@@ -156,7 +156,7 @@ See [vue-import](./examples/vue-import) example
 
 ```ts
 import path from 'node:path';
-import vscode from '@tomjs/vite-plugin-vscode';
+import vscode from '@czhlin/vite-plugin-vscode';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
@@ -255,7 +255,7 @@ const value = await acquireVsCodeApi().getState();
 
 ## Documentation
 
-- [index.d.ts](https://www.unpkg.com/browse/@tomjs/vite-plugin-vscode/dist/index.d.ts) provided by [unpkg.com](https://www.unpkg.com).
+- [index.d.ts](https://www.unpkg.com/browse/@czhlin/vite-plugin-vscode/dist/index.d.ts) provided by [unpkg.com](https://www.unpkg.com).
 
 ## Parameters
 
@@ -280,10 +280,10 @@ The `recommended` option is used to set the default configuration and behavior, 
 Inject [@tomjs/vscode-extension-webview](https://github.com/tomjs/vscode-extension-webview) into vscode extension code and web client code, so that `webview` can support `HMR` during the development stage.
 
 - vite serve
-  - extension: Inject `import __getWebviewHtml__ from '@tomjs/vite-plugin-vscode/webview';` at the top of the file that calls the `__getWebviewHtml__` method
-  - web: Add `<script>` tag to index.html and inject `@tomjs/vite-plugin-vscode/client` code
+  - extension: Inject `import __getWebviewHtml__ from '@czhlin/vite-plugin-vscode/webview';` at the top of the file that calls the `__getWebviewHtml__` method
+  - web: Add `<script>` tag to index.html and inject `@czhlin/vite-plugin-vscode/client` code
 - vite build
-  - extension: Inject `import __getWebviewHtml__ from '@tomjs/vite-plugin-vscode-inject';` at the top of the file that calls the `__getWebviewHtml__` method
+  - extension: Inject `import __getWebviewHtml__ from '@czhlin/vite-plugin-vscode-inject';` at the top of the file that calls the `__getWebviewHtml__` method
 
 If is string, will set inject method name. Default is `__getWebviewHtml__`.
 

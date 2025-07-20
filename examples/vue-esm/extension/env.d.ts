@@ -1,1 +1,1 @@
-/// <reference types="@tomjs/vite-plugin-vscode/env" />
+/// <reference types="@czhlin/vite-plugin-vscode/env" />
