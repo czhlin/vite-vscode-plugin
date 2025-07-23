@@ -1,8 +1,10 @@
+import { PLUGIN_NAME } from '../constants';
+
 if (window.top === window.self) {
   throw new Error('[vscode:client]: must run in vscode webview');
 }
 
-const TAG = '[@tomjs:vscode:client] ';
+const TAG = `[${PLUGIN_NAME}:client]`;
 
 patchAcquireVsCodeApi();
 

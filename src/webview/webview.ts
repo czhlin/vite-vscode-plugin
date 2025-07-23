@@ -12,7 +12,7 @@ export interface WebviewHtmlOptions {
  * @param options serverUrl string or object options
  */
 
-export function getWebviewHtml(options: WebviewHtmlOptions) {
+function getWebviewHtml(options: WebviewHtmlOptions) {
   const opts: WebviewHtmlOptions = {
     serverUrl: '',
   };

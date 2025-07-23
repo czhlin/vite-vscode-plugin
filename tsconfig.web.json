@@ -4,5 +4,5 @@
     "composite": true,
     "noEmit": false
   },
-  "include": ["src/webview/client.ts", "src/webview/window.d.ts"]
+  "include": ["src/webview/client.ts", "src/constants.ts", "src/webview/window.d.ts"]
 }
